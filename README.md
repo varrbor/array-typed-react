@@ -1,3 +1,1 @@
-# array-typed-react
-
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/vitejs-vite-wdhmjl)
+https://www.youtube.com/watch?v=hvXofiovcRg

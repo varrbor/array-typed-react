@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
-import './App.css'
+import './App.css';
 
 interface IInvoiceListProps {
   invoiceData: InvoiceDataType;
@@ -13,7 +13,7 @@ type InvoiceDataType = {
     id: number;
     name: string;
     total: string;
-  }[],
+  }[];
   logo?: string;
 };
 
@@ -23,26 +23,32 @@ const InvoiceList = (props: IInvoiceListProps) => {
     <div>
       <h1>{customerName}</h1>
       <hr />
+      <div>
+        {invoices.map((invoice) => (
+          <div>{invoice.name}</div>
+        ))}
+      </div>
+      <hr />
     </div>
   );
 };
 
 const App = () => {
   const data: InvoiceDataType = {
-    customerName: "Google",
+    customerName: 'Google',
     invoices: [
-      { id: 123, name: "Dev work", total: "20.00", paymentStatus: "paid" },
+      { id: 123, name: 'Dev work', total: '20.00', paymentStatus: 'paid' },
       {
         id: 456,
-        name: "More Dev work",
-        total: "50.00",
-        paymentStatus: "pending",
+        name: 'More Dev work',
+        total: '50.00',
+        paymentStatus: 'pending',
       },
       {
         id: 789,
-        name: "Something different",
-        total: "100.00",
-        paymentStatus: "paid",
+        name: 'Something different',
+        total: '100.00',
+        paymentStatus: 'paid',
       },
     ],
   };
@@ -54,4 +60,4 @@ const App = () => {
   );
 };
 
-export default App
+export default App;
