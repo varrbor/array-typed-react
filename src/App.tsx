@@ -1,23 +1,8 @@
-import { useState } from 'react';
-
 import './App.css';
 
-interface IInvoiceListProps {
-  invoiceData: InvoiceDataType;
-  logo?: string;
-}
 
-type InvoiceDataType = {
-  customerName: string;
-  invoices: {
-    id: number;
-    name: string;
-    total: string;
-  }[];
-  logo?: string;
-};
 
-const InvoiceList = (props: IInvoiceListProps) => {
+const InvoiceList = (props) => {
   const { customerName, invoices } = props.invoiceData;
   return (
     <div>
@@ -34,7 +19,7 @@ const InvoiceList = (props: IInvoiceListProps) => {
 };
 
 const App = () => {
-  const data: InvoiceDataType = {
+  const data = {
     customerName: 'Google',
     invoices: [
       { id: 123, name: 'Dev work', total: '20.00', paymentStatus: 'paid' },
