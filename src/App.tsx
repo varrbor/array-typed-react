@@ -18,6 +18,7 @@ const InvoiceList = (props) => {
   );
 };
 // added comment
+//added second comment
 const App = () => {
   const data = {
     customerName: 'Google',
